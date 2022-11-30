@@ -1,9 +1,8 @@
 package main
 
 import (
-	"github.com/open-ashirude/golangExercise/routes"
-
 	"github.com/gin-gonic/gin"
+	"golangExercise/routes"
 )
 
 func main() {
