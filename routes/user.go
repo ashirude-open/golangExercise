@@ -1,11 +1,14 @@
 package routes
 
 import (
+	"golangExercise/controller"
+
 	"github.com/gin-gonic/gin"
 )
 
 func UserRoute(router *gin.Engine) {
-	router.GET("/", func(c *gin.Context) {
-		c.String(200, "Hello world!")
-	})
+	router.GET("/", controller.GetUsers)
+	router.POST("/", controller.CreateUser)
+	router.DELETE("/:id", controller.DeleteUser)
+	router.PUT("/:id", controller.UpdateUser)
 }
